@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kavetri Bhatt — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Pastel pink + green minimalist portfolio */
+    :root{
+      --pink: #f8cdd3;
+      --green: #c5ebb9;
+      --card: rgba(255,255,255,0.85);
+      --muted: #5b5b5b;
+      --accent: #7c5cff;
+      --radius: 14px;
+      color-scheme: light;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: 'Poppins', system-ui, -apple-system,Segoe UI, Roboto, 'Helvetica Neue', Arial;
+     
+      background: linear-gradient(135deg, var(--pink) 0%, var(--green) 100%);
+      color: #111827;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5ad6ff);display:grid;place-items:center;font-weight:700;color:#071027}
+    .name{line-height:1}
+    .name h1{font-size:20px;margin:0}
+    .name p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:14px}
+    .btn-ghost{padding:8px 12px;border-radius:9px;background:transparent;border:1px solid transparent;color:var(--muted);font-weight:600}
+    .btn-ghost:hover{color:#000;border-color:rgba(0,0,0,0.06)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    @media (max-width:920px){main{grid-template-columns:1fr;}
+      header{flex-direction:column;align-items:flex-start}
+      .logo{width:48px;height:48px}
+    }
+
+    /* Left column */
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(16,24,40,0.12);}
+    .hero{display:flex;gap:18px;align-items:center}
+
+    /* avatar now uses an image */
+    .avatar{width:96px;height:96px;border-radius:12px;overflow:hidden;flex-shrink:0;border:2px solid rgba(0,0,0,0.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .hero h2{margin:0;font-size:22px}
+    .hero p{margin:6px 0 0;color:var(--muted)}
+
+    .links{display:flex;gap:12px;margin-top:14px}
+    .chip{background:transparent;padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px;border:1px solid rgba(0,0,0,0.06)}
+
+    h3{margin:0 0 12px 0}
+    .section{margin-top:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;background:rgba(0,0,0,0.03);border-radius:8px;font-size:13px;color:var(--muted)}
+
+    .projects{display:grid;gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);border:1px solid rgba(0,0,0,0.04)}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .meta{display:flex;gap:10px;margin-top:10px;font-size:13px;color:var(--muted)}
+
+    /* Right column */
+    .contact-card{position:sticky;top:28px}
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-row{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:rgba(255,255,255,0.6);border:1px solid rgba(0,0,0,0.04)}
+    .contact-row strong{min-width:72px;color:var(--muted)}
+
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small screens tweaks */
+    @media (max-width:520px){.avatar{width:72px;height:72px}.hero h2{font-size:18px}.container{padding:18px}}
+
+    /* subtle focus states */
+    a:focus, button:focus{outline:2px dashed rgba(124,92,255,0.25);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" style="background:none;padding:0;">
+          <img src="top.png.png" alt="Logo" style="width:56px;height:56px;border-radius:12px;object-fit:cover;">
+</div>
+        <div class="name">
+          <h1>Kavetri Bhatt</h1>
+         
+        </div>
+      </div>
+      <nav>
+        <a class="btn-ghost" href="#projects">Projects</a>
+        <a class="btn-ghost" href="#about">About</a>
+        <a class="btn-ghost" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LEFT: content -->
+      <div>
+        <section class="card">
+          <div class="hero">
+            <div class="avatar">
+              <!-- using the photo you uploaded -->
+              <img src="profile.jpg.jpeg" alt="Kavetri Bhatt">
+            </div>
+            <div>
+              <h2>Hello — I'm Kavetri</h2>
+              <p>Computer Science undergraduate focused on full-stack web development, ML & productivity tools.</p>
+
+              <div class="links" aria-label="quick links">
+                <a class="chip" href="mailto:kavetribhatt@gmail.com">kavetribhatt@gmail.com</a>
+                <a class="chip" href="tel:+918273885512">+91 8273885512</a>
+                <a class="chip" href="https://www.linkedin.com/in/kavetri-bhatt-40224a252" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="chip" href="https://github.com/KavetriBhatt-X" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="about">
+            <h3>About</h3>
+            <p style="color:var(--muted);line-height:1.6">I'm a B.Tech (CSE) student building full-stack apps and ML projects. I love turning ideas into useful tools — from a desktop app usage tracker to voice note web apps. I focus on readable code, thoughtful UI and measurable impact.</p>
+          </div>
+
+          <div class="section">
+            <h3>Skills</h3>
+            <div class="skills">
+              <span class="skill">Python</span>
+              <span class="skill">Flask</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">HTML & CSS</span>
+              <span class="skill">Computer Vision</span>
+              <span class="skill">TensorFlow</span>
+              <span class="skill">Git</span>
+              <span class="skill">psutil</span>
+            </div>
+          </div>
+
+          <div class="section" id="projects">
+            <h3>Selected Projects</h3>
+            <div class="projects">
+              <article class="project">
+                <h4>LogMyApp — Real-Time Application Usage Tracker</h4>
+                <p>Full-stack productivity tracker that monitors desktop app usage and exposes analytics via a Flask REST API. Increased daily productivity awareness by ~35%.</p>
+                <div class="meta">
+                  <span>Python • Flask • psutil</span>
+                  <span>Jul 2025</span>
+                </div>
+              </article>
+
+              <article class="project">
+                <h4>Pothole Detection System</h4>
+                <p>AI road damage detector using CNNs achieving 92% precision and 89% recall — reduced manual inspection time significantly.</p>
+                <div class="meta"><span>Python • TensorFlow • OpenCV</span><span>Dec 2024</span></div>
+              </article>
+
+              <article class="project">
+                <h4>Voice Note App</h4>
+                <p>Web-based voice note app using the Web Speech API for transcription and playback with fast response times and 92% transcription accuracy.</p>
+                <div class="meta"><span>JavaScript • Web Speech API</span><span>Nov 2023</span></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Education</h3>
+            <p style="color:var(--muted)">B.Tech, Computer Science — Graphic Era University (2022–2026)</p>
+          </div>
+        </section>
+
+        <footer>
+          <small>Designed & built by Kavetri • Minimalist portfolio template</small>
+        </footer>
+      </div>
+
+      <!-- RIGHT: contact / quick info -->
+      <aside class="contact-card">
+        <div class="card">
+          <h3>Contact</h3>
+          <div class="contact-list" id="contact">
+            <div class="contact-row"><strong>Email</strong><span>kavetribhatt@gmail.com</span></div>
+            <div class="contact-row"><strong>Phone</strong><span>+91 8273885512</span></div>
+            <div class="contact-row"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/kavetri-bhatt-40224a252" target="_blank">/in/kavetri-bhatt-40224a252</a></div>
+            <div class="contact-row"><strong>GitHub</strong><a href="https://github.com/KavetriBhatt-X" target="_blank">KavetriBhatt-X</a></div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:8px">
+            <a class="btn-ghost" href="#projects">See Projects</a>
+            <a class="btn-ghost" href="mailto:kavetribhatt@gmail.com">Email Me</a>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h3>Resume</h3>
+          <p style="color:var(--muted);margin:0 0 12px 0">Download a concise copy of my CV / resume.</p>
+          <a class="btn-ghost" href="#" id="downloadResume">Download PDF</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Minimal JS: resume download + smooth scroll
+    document.getElementById('downloadResume').addEventListener('click', function(e){
+      e.preventDefault();
+      // Replace with your uploaded resume url or keep link to drive/GitHub
+      const resumeUrl = 'resume.pdf';
+      window.open(resumeUrl, '_blank');
+    });
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          ev.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+  </script>
+</body>
+</html>
